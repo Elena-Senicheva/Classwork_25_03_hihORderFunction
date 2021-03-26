@@ -1,49 +1,25 @@
-let num1 = +prompt("Write a:");
-let num2 = +prompt("Write b:");
-const operator = prompt("Write operator:");
+// let counter = 0;
 
-function sum(a , b){
-  return a + b;
-}
+// while (counter <10 ){
+//    if(counter % 2 === 0){
+//     console.log(counter);
+//   }
+//   counter++;
+// }
 
-function sub(a , b){
-  return a - b;
-}
 
-function mul(a , b){
-  return a * b;
-}
+const GOOD_PASSWORD = "qwerty123";
 
-function div (a , b){
-  return a / b;
-}
+let counter=0;
 
-const highOrderFunc = function (num1 , num2, operationFunc){
-  const result = operationFunc(num1 , num2);
-  console.log(operationFunc);
-  return result;
-
- }
-
-switch(operator){
-  case "+": {
-    const result2= highOrderFunc(num1, num2, sum);
-    console.log(result2);
+while (counter < 5 ){
+  const parol = prompt("Введите пароль:");
+  if(parol != GOOD_PASSWORD){
+    console.log("Пароль введён неверно");
+  }
+  else{
     break;
   }
-  case "-": {
-    const result3 = highOrderFunc(num1, num2, sub);
-    console.log(result3);
-    break;
-  }
-  case "*": {
-    const result4= highOrderFunc(num1, num2, mul);
-    console.log(result4);
-    break;
-  }
-  case "/": {
-    const result5= highOrderFunc(num1, num2, div);
-    console.log(result5);
-    break;
-  }
+   counter++ 
+  
 }
